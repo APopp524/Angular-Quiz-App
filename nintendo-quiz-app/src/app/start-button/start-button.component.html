@@ -1,0 +1,16 @@
+<div class="startContainer">
+  <button
+    (click)="loadMyChildComponent()"
+    routerLink="/quiz-card-component"
+    routerLinkActive="active"
+    type="button"
+    id="startButton"
+    class="nes-btn is-primary"
+    *ngIf="this.isButtonVisible"
+    (click)="this.isButtonVisible = false"
+  >
+    Start
+  </button>
+</div>
+
+<app-quiz-card *ngIf="loadComponent"></app-quiz-card>

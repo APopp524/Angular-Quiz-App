@@ -1,5 +1,7 @@
-body {
-    background-color: #ffff;
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-  }
+h1 { font-size: 45px; }
+
+app-header {
+  background-color: #ffff;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}

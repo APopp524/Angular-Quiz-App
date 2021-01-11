@@ -9,3 +9,5 @@ import {Component, ViewEncapsulation} from '@angular/core';
 export class AppComponent {
   title = 'nintendo-quiz-app';
 }
+
+
