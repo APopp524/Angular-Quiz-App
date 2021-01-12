@@ -10,10 +10,5 @@ export class StartButtonComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public loadComponent = false;
-  loadMyChildComponent() {
-    this.loadComponent = true;
-  }
-
   public isButtonVisible = true;
 }
