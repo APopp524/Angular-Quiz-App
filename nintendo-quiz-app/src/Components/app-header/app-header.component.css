@@ -1,0 +1,14 @@
+h1 {
+  font-size: 45px;
+}
+
+.navbar {
+  background-color: #ffff;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  height: 70px;
+}

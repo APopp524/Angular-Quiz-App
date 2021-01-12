@@ -1,11 +1,11 @@
-<div class="startContainer" [routerLink]="['/app-quiz-card']">
+<div class="Container" [routerLink]="['main-page']">
   <button
     type="button"
-    id="startButton"
-    class="nes-btn is-primary"
+    id="mainPageButton"
+    class="nes-btn is-secondary"
     *ngIf="this.isButtonVisible"
     (click)="this.isButtonVisible = false"
   >
-    Start
+    Home
   </button>
 </div>
