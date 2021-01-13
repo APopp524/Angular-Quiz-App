@@ -1,12 +1,17 @@
 <div class="container">
   <div class="question-container">
-    <span class="question-num">1-</span>
-    <p class="question">This is question number one?</p>
+    <span class="question-num">{{ question.id }}</span>
+    <p class="question">{{ question.prompt }}</p>
   </div>
 
   <div class="question-body">
-    <div class="choices"></div>
+    <div
+      *ngFor="let question of questions"
+      (click)="onSelect(question)"
+      class="choices"
+    ></div>
 
-    <main-page-button></main-page-button>
+    <div class="footer"></div>
   </div>
 </div>
+<main-page-button></main-page-button> 

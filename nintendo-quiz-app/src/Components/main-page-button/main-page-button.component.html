@@ -1,11 +1,11 @@
-<div class="Container" [routerLink]="['main-page']">
+<div class="Container" [routerLink]="['/']">
   <button
     type="button"
     id="mainPageButton"
-    class="nes-btn is-secondary"
+    class="nes-btn is-error"
     *ngIf="this.isButtonVisible"
     (click)="this.isButtonVisible = false"
   >
-    Home
+    Restart
   </button>
 </div>
