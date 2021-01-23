@@ -1,6 +1,7 @@
+import { computeDecimalDigest } from "@angular/compiler/src/i18n/digest";
 import { Question } from "src/app/Models/Question";
 
-export const questionsArray: Question[] = [
+export const questionsArray: any = [
   {
     id: 1,
     prompt:

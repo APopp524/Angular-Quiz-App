@@ -1,17 +1,26 @@
 <div class="container">
   <div class="question-container">
-    <span class="question-num">{{ question.id }}</span>
-    <p class="question">{{ question.prompt }}</p>
+    <span class="question-num">{{ questionId }}</span>
+    <p class="question">{{ questionPrompt }}</p>
   </div>
 
   <div class="question-body">
-    <div
-      *ngFor="let question of questions"
-      (click)="onSelect(question)"
-      class="choices"
-    ></div>
+    <div class="choices">{{ questionChoices }}</div>
+  </div>
 
-    <div class="footer"></div>
+  <div class="btn-container">
+    <button
+      id="previous-btn"
+      (click)="previous()"
+      [ngClass]="
+        this.questionId == 1 ? 'nes-btn is-disabled' : 'nes-btn is-warning'
+      "
+      [disabled]="this.questionId == 1"
+    >
+      Previous
+    </button>
+    <div id="next-btn" class="nes-btn is-success" (click)="next()">Next</div>
   </div>
 </div>
+
 <main-page-button></main-page-button> 
