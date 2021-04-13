@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'nintendo-quiz-app'`, () => {
+  it(`should have as title 'angular11-quiz'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('nintendo-quiz-app');
+    expect(app.title).toEqual('angular11-quiz');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('nintendo-quiz-app app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('angular11-quiz app is running!');
   });
 });

@@ -1,24 +1,22 @@
-import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { QuizCardComponent } from "../Components/quiz-card/quiz-card.component";
-import { AppHeaderComponent } from "../Components/app-header/app-header.component";
-import { StartButtonComponent } from "../Components/start-button/start-button.component";
-import { MainPageComponent } from "../Pages/main-page/main-page.component";
-import { MainPageButtonComponent } from "../Components/main-page-button/main-page-button.component";
+import { QuizComponent } from "./quiz/quiz.component";
+import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatRadioModule } from "@angular/material/radio";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AppHeaderComponent,
-    QuizCardComponent,
-    StartButtonComponent,
-    MainPageComponent,
-    MainPageButtonComponent,
+  declarations: [AppComponent, QuizComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatRadioModule,
   ],
-  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
