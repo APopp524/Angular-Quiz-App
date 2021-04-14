@@ -8,6 +8,7 @@
       <div class="progress">
         <div
           class="progress-bar progress-bar-striped progress-bar-animated"
+          color="#f58634"
           role="progressbar"
           aria-valuenow="10"
           aria-valuemin="30"
@@ -15,29 +16,28 @@
           [style.width]="width + '%'"
         ></div>
       </div>
-      <h5>progess: {{ quizProgress + 1 }}</h5>
+
       <div class="py-2 h5" [innerHtml]="questions[num].question">
         <b>Q-{{ num + 1 }}</b>
       </div>
+
       <div class="ml-md-3 ml-sm-3 pl-md-5 pt-sm-0 pt-3" id="options">
         <div *ngFor="let ans of questions[num].incorrect_answers">
-          <label class="options"
-            >{{ ans }}
-            <input
-              type="radio"
+          <mat-radio-group aria-label="Select an option">
+            <mat-radio-button
               (click)="checkAnswer(questions[num].correct_answer, ans)"
-              name="radio"
-            />
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="ml-auto mr-sm-5">
-          <button (click)="start()" class="btn btn-success">
-            Restart Quiz
-          </button>
+              color="white"
+              value="1"
+              >{{ ans }}</mat-radio-button
+            >
+          </mat-radio-group>
         </div>
       </div>
+      <div class="ml-auto mr-sm-5">
+        <button (click)="start()" class="btn btn-success">Restart Quiz</button>
+      </div>
     </div>
+
     <ng-template #elseBlock>
       <div class="d-flex align-items-center pt-3">
         <h4>Your Scores: {{ scores }}</h4>

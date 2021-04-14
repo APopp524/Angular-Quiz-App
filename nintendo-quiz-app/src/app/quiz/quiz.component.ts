@@ -33,7 +33,6 @@ export class QuizComponent implements OnInit {
         element.incorrect_answers.sort(() => 0.5 - Math.random());
       });
       this.questions = await quiz;
-      this.startTimer();
       this.num = 0;
       this.scores = 0;
       this.width = 0;
@@ -45,21 +44,5 @@ export class QuizComponent implements OnInit {
     this.answer ? (this.scores += 10) : (this.scores -= 5);
     this.num < this.questions.length ? (this.num += 1) : null;
     this.width += 10;
-  }
-
-  displayTimeElapsed() {
-    return (
-      Math.floor(this.seconds / 3600) +
-      ":" +
-      Math.floor(this.seconds / 60) +
-      ":" +
-      Math.floor(this.seconds % 60)
-    );
-  }
-
-  startTimer() {
-    this.timer = setInterval(() => {
-      this.seconds++;
-    }, 1000);
   }
 }

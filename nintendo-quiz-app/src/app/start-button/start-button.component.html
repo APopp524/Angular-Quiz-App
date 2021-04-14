@@ -1,0 +1,16 @@
+<div class="startContainer">
+  <button
+    (click)="loadMyChildComponent()"
+    routerLink="/quiz-component"
+    routerLinkActive="active"
+    type="button"
+    id="startButton"
+    class="btn btn-success"
+    *ngIf="this.isButtonVisible"
+    (click)="this.isButtonVisible = false"
+  >
+    Start
+  </button>
+</div>
+
+<app-quiz *ngIf="loadComponent"></app-quiz>

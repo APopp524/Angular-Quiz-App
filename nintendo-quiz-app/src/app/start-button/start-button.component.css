@@ -1,0 +1,13 @@
+#startButton {
+  margin: 0 auto;
+  display: block;
+}
+
+.startContainer {
+  padding: 50px;
+}
+
+.btn-success {
+  padding: 25px 50px 25px 50px;
+  font-size: 30px;
+}
